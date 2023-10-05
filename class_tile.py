@@ -10,6 +10,5 @@ class Tile:
     
     def __str__(self):
 
-        return (f"You're in the {self.str_quadrant} of the map, coordinates [{self.int_loc_x},{self.int_loc_y}] and docked on {self.str_island_name} Island")
-    
+        return (f"Here is {self.str_island_name} Island in the {self.str_quadrant} Quadrant of the map, coordinates [{self.int_loc_x},{self.int_loc_y}]")
     
