@@ -8,8 +8,8 @@ class Player:
         self.str_home_city = str_home_city
         self.int_age = int_age
 
-        self.int_loc_x = 2
-        self.int_loc_y = 2
+        self.int_loc_x = 1
+        self.int_loc_y = 1
 
         self.int_atk_pwr = 1 
 
