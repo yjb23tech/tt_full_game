@@ -23,17 +23,19 @@ def play():
         test_player_input = str_get_player_input(arr_player_input_options)
 
         if test_player_input in ['North', 'NORTH', 'north', 'N', 'n', '^']:
+            #Check to see if the user_player has conquered all 9 islands
             bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
         elif test_player_input in ['East', 'EAST', 'east', 'E', 'e', '>']:
-            print("blah blah")
+            #Check to see if the user_player has conquered all 9 islands 
+            bool_game_is_complete = bool_game_is_complete(arr_tiles_islands_full_list, test_player)
         elif test_player_input in ['South', 'SOUTH', 'south', 'S', 's', 'v']:
-            print("blah blah blah")
+            #Check to see if the user_player has conquered all 9 islands
+            bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
         elif test_player_input in ['West', 'WEST', 'west', 'W', 'w', '<']:
-            print("blah blah blah blah")
+            #Check to see if the user_player has conquered all 9 islands 
             bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
         elif test_player_input in ['Inventory', 'INVENTORY', 'inventory', 'I', 'i']:
             print("bleep")
-            bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
         elif test_player_input in ['Quit', 'QUIT', 'quit', 'Q', 'q']:
             print("bloop")
             bool_game_is_on = False
