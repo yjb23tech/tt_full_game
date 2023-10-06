@@ -31,7 +31,7 @@ dict_moves_in_x = {
 
     1: {
 
-        0: " East"
+        0: "East"
     }
 }
 

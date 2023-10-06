@@ -9,11 +9,11 @@ class Player:
         self.int_age = int_age
 
         self.int_loc_x = 1
-        self.int_loc_y = 1
+        self.int_loc_y = 2
 
         self.int_atk_pwr = 1 
 
-        self.arr_tiles_islands_conquered = ['Drum Island', 'Wano', 'Skypeia', 'Fishman', 'Romance Dawn', 'Zou', 'Alabasta', 'Thriller Bark', 'Marineford']
+        self.arr_tiles_islands_conquered = ['Drum Island', 'Skypeia', 'Fishman', 'Romance Dawn', 'Zou', 'Alabasta', 'Thriller Bark']
         self.arr_tiles_collected_treasure = []
     
     def __str__(self):
@@ -24,7 +24,7 @@ class Player:
 
         #Do I need to import the Tile class to be able to work with Tile objects? It doesn't appear so... 
         player_current_tile = arr_game_grid[self.int_loc_x][self.int_loc_y]
-        print(f"You're currently on {player_current_tile.str_island_name} in the {player_current_tile.str_quadrant} Quadrant of the map")
+        print(f"\nYou're currently on {player_current_tile.str_island_name} in the {player_current_tile.str_quadrant} Quadrant of the map")
         print(f"Your current coordinates are: [{self.int_loc_x}, {self.int_loc_y}]\n")
 
     #My own creation aka Frankenstein's Monster; really proud of this method - it works well! 

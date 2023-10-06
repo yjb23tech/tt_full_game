@@ -37,7 +37,6 @@ def play():
         elif test_player_input in ['Inventory', 'INVENTORY', 'inventory', 'I', 'i']:
             print("bleep")
         elif test_player_input in ['Quit', 'QUIT', 'quit', 'Q', 'q']:
-            print("bloop")
             bool_game_is_on = False
         else:
             print("So misunderstood")
@@ -45,7 +44,7 @@ def play():
     if bool_game_is_complete == True:
         print("\nWell done on beating the game Sailor\n")
     else:
-        print("You'll be at sea again soon Sailor; rest for now")
+        print("\nYou'll be at sea again soon Sailor; rest for now\n")
 
 play()
 

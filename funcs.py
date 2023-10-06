@@ -40,7 +40,7 @@ def bool_is_game_complete(arr_tiles_islands_all, user_player) -> bool:
     
     if (len(arr_tiles_islands_unconquered) == 0):
 
-        print("Congratulations: you've successfully conquered all 9 islands\n")
+        print("\nCongratulations: you've successfully conquered all 9 islands\n")
         x = 1
         for island in user_player.arr_tiles_islands_conquered:
             print(f"{x}. {island}")
@@ -50,9 +50,9 @@ def bool_is_game_complete(arr_tiles_islands_all, user_player) -> bool:
     
     else:
 
-        print("You still have the following islands to conquer:\n")
+        print("\nYou still have the following islands to conquer:\n")
         for z, island in enumerate(arr_tiles_islands_unconquered, 1):
-            print(f"{z} {island}")
+            print(f"{z}. {island}")
         
         return False
 
