@@ -2,7 +2,7 @@ from class_tile import Tile
 
 arr_world_map = [
 
-    [Tile(0, 0, "South Western", "Dressrosa"), Tile(0, 1, "Western", "Wano"), Tile(0, 2, "North Western", "Skypeia")],
+    [Tile(0, 0, "South Western", "Drum Island"), Tile(0, 1, "Western", "Wano"), Tile(0, 2, "North Western", "Skypeia")],
     [Tile(1, 0, "Southern", "Fishman"), Tile(1, 1, "Central", "Romance Dawn"), Tile(1, 2, "Northern", "Zou")], 
     [Tile(2, 0, "South Eastern", "Alabasta"), Tile(2, 1, "Eastern", "Thriller Bark"), Tile(2, 2, "North Eastern", "Marineford")]
 ]
