@@ -34,7 +34,7 @@ def bool_is_game_complete(arr_tiles_islands_all, user_player) -> bool:
 
     for island in arr_tiles_islands_all:
         if island in user_player.arr_tiles_islands_conquered:
-            print(" ")
+            continue
         else:
             arr_tiles_islands_unconquered.append(island)
     
@@ -43,7 +43,7 @@ def bool_is_game_complete(arr_tiles_islands_all, user_player) -> bool:
         print("Congratulations: you've successfully conquered all 9 islands\n")
         x = 1
         for island in user_player.arr_tiles_islands_conquered:
-            print(f{x}. {island})
+            print(f"{x}. {island}")
             x += 1 
         
         return True
