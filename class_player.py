@@ -25,7 +25,7 @@ class Player:
         #Do I need to import the Tile class to be able to work with Tile objects? It doesn't appear so... 
         player_current_tile = arr_game_grid[self.int_loc_x][self.int_loc_y]
         print(f"You're currently on {player_current_tile.str_island_name} in the {player_current_tile.str_quadrant} Quadrant of the map")
-        print(f"Your current coordinates are: [{self.int_loc_x}, {self.int_loc_y}]")
+        print(f"Your current coordinates are: [{self.int_loc_x}, {self.int_loc_y}]\n")
 
     #My own creation aka Frankenstein's Monster. 
     def player_tile_valid_directions(self, arr_game_grid, dict_directions_y, dict_directions_x):
@@ -57,18 +57,37 @@ class Player:
                     invalid_direction = dict_directions_y[x][y]
                     arr_invalid_travel_strings.append(f"You cannot travel {invalid_direction}")
         
+        for x in range(-1, 2):
+            for y in range(1):
+
+                tile_int_loc_x_valid_tbc = self.int_loc_x + x
+                tile_int_loc_y_valid_tbc = self.int_loc_y + y 
+            
+            try:
+
+                if tile_int_loc_x_valid_tbc < 0:
+                    raise IndexError
+                
+                valid_tile = arr_game_grid[tile_int_loc_x_valid_tbc][tile_int_loc_y_valid_tbc]
+                valid_direction = dict_directions_x[x][y]
+
+                if valid_direction == 'No Movement':
+                    continue
+                else:
+                    arr_valid_travel_strings.append(f"You can travel {valid_direction} to {valid_tile.str_island_name} Island")
+            
+            except IndexError:
+
+                invalid_direction = dict_directions_x[x][y]
+                arr_invalid_travel_strings.append(f"You cannot travel {invalid_direction}")
+
         for valid_travel_string in arr_valid_travel_strings:
             print(valid_travel_string)
-        
+        print(" ")
+
         for invalid_travel_string in arr_invalid_travel_strings:
             print(invalid_travel_string)
-        
-
-
-
-
-
-
+        print(" ")
 
     def int_launch_atk(self):
 
