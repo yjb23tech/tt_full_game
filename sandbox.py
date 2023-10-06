@@ -1,44 +1,10 @@
 from class_player import Player
 from class_tile import Tile 
+from funcs import str_get_player_input 
+from data_storage import arr_world_map, dict_moves_in_y, dict_moves_in_x, arr_player_input_options 
 
 test_player = Player("Yuri Orlov", "Odessa", 47)
 print(test_player)
-
-arr_world_map = [
-
-    [Tile(0, 0, "South Western", "Dressrosa"), Tile(0, 1, "Western", "Wano"), Tile(0, 2, "North Western", "Skypeia")], 
-    [Tile(1, 0, "Southern", "Fisman"), Tile(1, 1, "Central", "Romance Dawn"), Tile(1, 2, "Northern", "Zou")], 
-    [Tile(2, 0, "South Eastern", "Alabasta"), Tile(2, 1, "Eastern", "Thriller Bark"), Tile(2, 2, "North Eastern", "Marineford")]
-]
-
-dict_moves_in_y = {
-
-    0: {
-
-        -1: "South", 
-        0: "Stay", 
-        1: "North"
-    }
-}
-
-dict_moves_in_x = {
-
-    -1: {
-
-        0: "West"
-    }, 
-
-    0: {
-
-        0: "No Movement"
-    }, 
-
-    1: {
-
-        0: "East"
-    }
-}
-
 
 #x = 1
 #while (x < 4):
@@ -53,3 +19,6 @@ dict_moves_in_x = {
 
 test_player.player_tile_location(arr_world_map)
 test_player.player_tile_valid_directions(arr_world_map, dict_moves_in_y, dict_moves_in_x)
+
+test_player_input = str_get_player_input(arr_player_input_options)
+print(f"Chosen action: {test_player_input}")
