@@ -18,7 +18,7 @@ class Player:
     
     def __str__(self):
 
-        return (f"Name: {self.str_name} Home City: {self.str_home_city} Age: {self.int_age}\n")
+        return (f"\n\nName: {self.str_name} Home City: {self.str_home_city} Age: {self.int_age}\n")
     
     def player_tile_location(self, arr_game_grid):
 
