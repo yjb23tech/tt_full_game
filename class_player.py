@@ -8,8 +8,8 @@ class Player:
         self.str_home_city = str_home_city
         self.int_age = int_age
 
-        self.int_loc_x = 0
-        self.int_loc_y = 0
+        self.int_loc_x = 2
+        self.int_loc_y = 2
 
         self.int_atk_pwr = 1 
 
@@ -85,6 +85,7 @@ class Player:
             print(valid_travel_string)
         print(" ")
 
+        #When at [1, 1] you can travel in all directions; quite nicely, no error is thrown - instead the 'for' loop simply doesn't run
         for invalid_travel_string in arr_invalid_travel_strings:
             print(invalid_travel_string)
         print(" ")
