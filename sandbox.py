@@ -52,5 +52,4 @@ dict_moves_in_x = {
     #print(" ")
 
 test_player.player_tile_location(arr_world_map)
-
 test_player.player_tile_valid_directions(arr_world_map, dict_moves_in_y, dict_moves_in_x)

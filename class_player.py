@@ -27,7 +27,7 @@ class Player:
         print(f"You're currently on {player_current_tile.str_island_name} in the {player_current_tile.str_quadrant} Quadrant of the map")
         print(f"Your current coordinates are: [{self.int_loc_x}, {self.int_loc_y}]\n")
 
-    #My own creation aka Frankenstein's Monster. 
+    #My own creation aka Frankenstein's Monster; really proud of this method - it works well! 
     def player_tile_valid_directions(self, arr_game_grid, dict_directions_y, dict_directions_x):
 
         arr_valid_travel_strings = []
