@@ -38,3 +38,14 @@ dict_moves_in_x = {
 
 #Should be stored in a data_storage file
 arr_player_input_options = ['N to travel North', 'E to travel East', 'S to travel South', 'W to travel West', 'Press I to view your Invetory', 'Q to Quit the game']
+
+#x = 1
+#while (x < 4):
+    #print(f"{test_player.str_name} currently has an atk pwr of: {test_player.int_atk_pwr}")
+    #print(f"{test_player.str_name} now has an atk pwr of: {test_player.int_launch_atk()}\n")
+    #x += 1 
+
+#for x in range(len(arr_world_map)):
+    #for y in range(len(arr_world_map)):
+        #print(arr_world_map[x][y])
+    #print(" ")
