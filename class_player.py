@@ -13,8 +13,8 @@ class Player:
 
         self.int_atk_pwr = 1 
 
-        self.tiles_conquered = []
-        self.tiles_collected_treasure = []
+        self.arr_tiles_islands_conquered = []
+        self.arr_tiles_collected_treasure = []
     
     def __str__(self):
 
