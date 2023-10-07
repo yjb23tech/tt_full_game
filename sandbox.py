@@ -35,6 +35,7 @@ def play():
             #Check to see if the user_player has conquered all 9 islands 
             bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
         elif test_player_input in ['Inventory', 'INVENTORY', 'inventory', 'I', 'i']:
+            #Reveal to the user_player their inventory 
             print("bleep")
         elif test_player_input in ['Quit', 'QUIT', 'quit', 'Q', 'q']:
             bool_game_is_on = False
