@@ -16,7 +16,7 @@ class Tile:
 
         if (tile_boss.int_hp <= 0):
 
-            print(f"\nYou have already defeated {tile_boss.str_name}! Please continue to the next Island safely {user_player.str_name}\n")
+            print(f"\nYou have already defeated {tile_boss.str_name} on {tile_boss.str_island} Island! Please continue to the next Island safely {user_player.str_name}\n")
 
         else:
 
