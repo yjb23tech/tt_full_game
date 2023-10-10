@@ -11,5 +11,5 @@ class Foe:
     
     def __str__(self):
 
-        return (f"I am Captain {self.str_name} of {self.str_island} Island! Try me if you dare!")
+        return (f"I am Captain {self.str_name} of {self.str_island} Island! LET'S FIGHT!\n")
     

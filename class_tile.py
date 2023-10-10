@@ -20,6 +20,9 @@ class Tile:
 
         else:
 
+            print(self)
+            print(tile_boss)
+
             while (tile_boss.int_hp > 0):
 
                 print(f"{tile_boss.str_name} currently has {tile_boss.int_hp} health points")

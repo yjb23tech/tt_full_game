@@ -11,6 +11,7 @@ def str_get_player_input(arr_input_options) -> str:
     print(" ")
 
     player_input = input("\nPlease choose from the options above:\n")
+    print(" ")
     return player_input
 
 def set_player_name():
@@ -53,7 +54,7 @@ def bool_is_game_complete(arr_tiles_islands_all, user_player) -> bool:
         print("\nYou still have the following islands to conquer:\n")
         for z, island in enumerate(arr_tiles_islands_unconquered, 1):
             print(f"{z}. {island}")
-        
+        print(" ")
         return False
 
 

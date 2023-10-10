@@ -17,13 +17,27 @@ def play():
         #Everything below Exists inside 'while' game loop until declared otherwise
         #view_world_map(arr_world_map)
         
+        print("-----------------------------------------------------------------------------------")
+
         test_player.player_tile_location(arr_world_map)
         test_player.player_tile_valid_directions(arr_world_map, dict_moves_in_y, dict_moves_in_x)
         
         test_player_input = str_get_player_input(arr_player_input_options)
 
         if test_player_input in ['North', 'NORTH', 'north', 'N', 'n', '^']:
+
+            #Validate the tile
+
+
             #pvp boss fight
+            valid_tile = arr_world_map[test_player.int_loc_x + 0][test_player.int_loc_y + 1]
+
+            test_player.int_loc_x = valid_tile.int_loc_x
+            test_player.int_loc_y = valid_tile.int_loc_y
+
+            valid_tile_boss = arr_tile_bosses[valid_tile.int_loc_x][valid_tile.int_loc_y]
+            valid_tile.pvp_tile_boss(valid_tile_boss, test_player)
+
             #Check to see if the user_player has conquered all 9 islands
             bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
         elif test_player_input in ['East', 'EAST', 'east', 'E', 'e', '>']:
