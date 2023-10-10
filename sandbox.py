@@ -108,7 +108,7 @@ def play():
             print("So misunderstood")
     
     if bool_game_is_complete == True:
-        print("\nWell done on beating the game Sailor\n")
+        print("\nWell done on beating the game Sailor: the One Piece is yours\n")
     else:
         print("\nYou'll be at sea again soon Sailor; rest for now\n")
 
