@@ -12,3 +12,19 @@ class Tile:
 
         return (f"Here is {self.str_island_name} Island in the {self.str_quadrant} Quadrant of the map, coordinates [{self.int_loc_x},{self.int_loc_y}]")
     
+    def pvp_tile_boss(self, tile_boss, user_player):
+
+        if (tile_boss.int_hp <= 0):
+
+            print(f"\nYou have already defeated {tile_boss.str_name}! Please continue to the next Island safely {user_player.str_name}\n")
+
+        else:
+
+            while (tile_boss.int_hp > 0):
+
+                print(f"{tile_boss.str_name} currently has {tile_boss.int_hp} health points")
+                tile_boss.int_hp = tile_boss.int_hp - user_player.int_launch_atk()
+                print(f"After the vicious attack from {user_player.str_name}, {tile_boss.str_name} now has {tile_boss.int_hp} remaining!")
+            
+            print(f"\nCongratulations: you have defeated {tile_boss.str_name}\n")
+         

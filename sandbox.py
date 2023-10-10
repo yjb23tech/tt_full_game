@@ -1,7 +1,7 @@
 from class_player import Player
 from class_tile import Tile 
 from funcs import str_get_player_input, view_world_map, set_player_name, set_player_home_city, set_player_age, bool_is_game_complete
-from data_storage import arr_world_map, dict_moves_in_y, dict_moves_in_x, arr_player_input_options, arr_tiles_islands_full_list
+from data_storage import arr_world_map, arr_tile_bosses, dict_moves_in_y, dict_moves_in_x, arr_player_input_options, arr_tiles_islands_full_list
 
 def play():
 

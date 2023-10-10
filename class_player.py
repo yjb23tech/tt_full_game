@@ -92,7 +92,7 @@ class Player:
 
     def int_launch_atk(self):
 
-        self.int_atk_pwr = random.randint(10, 20)
+        self.int_atk_pwr = random.randint(70, 90)
         current_atk_pwr = self.int_atk_pwr 
         return current_atk_pwr 
     
