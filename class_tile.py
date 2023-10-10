@@ -27,4 +27,8 @@ class Tile:
                 print(f"After the vicious attack from {user_player.str_name}, {tile_boss.str_name} now has {tile_boss.int_hp} remaining!")
             
             print(f"\nCongratulations: you have defeated {tile_boss.str_name}\n")
+            user_player.arr_tiles_islands_conquered.append(self.str_island_name)
+            print(f"You have now conquered {user_player.arr_tiles_islands_conquered[-1]}")
+        
+
          
