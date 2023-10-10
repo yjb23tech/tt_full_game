@@ -13,7 +13,7 @@ class Player:
 
         self.int_atk_pwr = 1 
 
-        self.arr_tiles_islands_conquered = ['Drum Island', 'Skypeia', 'Fishman', 'Romance Dawn', 'Zou', 'Alabasta', 'Thriller Bark']
+        self.arr_tiles_islands_conquered = ['Drum Island', 'Skypeia', 'Fishman', 'Romance Dawn', 'Zou', 'Alabasta', 'Thriller Bark', 'Wano']
         self.arr_tiles_collected_treasure = []
     
     def __str__(self):
