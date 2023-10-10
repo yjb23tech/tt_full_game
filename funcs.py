@@ -1,3 +1,6 @@
+from class_tile import Tile
+from data_storage import arr_world_map
+
 def view_world_map(arr_game_grid):
     for x in range(len(arr_game_grid)):
         for y in range(len(arr_game_grid)):
@@ -57,6 +60,22 @@ def bool_is_game_complete(arr_tiles_islands_all, user_player) -> bool:
         print(" ")
         return False
 
+def tile_validation(int_move_x, int_move_y, arr_game_grid, user_player) -> Tile:
+
+    potential_tile_int_loc_x = user_player.int_loc_x + int_move_x
+    potential_tile_int_loc_y = user_player.int_loc_y + int_move_y
+
+    try:
+
+        if ((potential_tile_int_loc_x < 0) or (potential_tile_int_loc_y < 0)):
+            raise IndexError
+
+        queried_tile = arr_game_grid[potential_tile_int_loc_x][potential_tile_int_loc_y]
+        return queried_tile
+    except IndexError:
+        print("You cannot move in this direction")
+        return None
+    
 
 
     

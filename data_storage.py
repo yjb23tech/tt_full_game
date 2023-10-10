@@ -46,5 +46,5 @@ dict_moves_in_x = {
 
 arr_player_input_options = ['N to travel North', 'E to travel East', 'S to travel South', 'W to travel West', 'I to view your Inventory', 'Q to Quit the game']
 
-arr_tiles_islands_full_list = ['Drum Island', 'Wano', 'Skypeia', 'Fishman', 'Romance Dawn', 'Zou', 'Alabasta', 'Thriller Bark', 'Marineford']
+arr_tiles_islands_full_list = ['Drum', 'Wano', 'Skypeia', 'Fishman', 'Romance Dawn', 'Zou', 'Alabasta', 'Thriller Bark', 'Marineford']
 
