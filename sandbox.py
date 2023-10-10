@@ -28,7 +28,7 @@ def play():
             bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
         elif test_player_input in ['East', 'EAST', 'east', 'E', 'e', '>']:
             #Check to see if the user_player has conquered all 9 islands 
-            bool_game_is_complete = bool_game_is_complete(arr_tiles_islands_full_list, test_player)
+            bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
         elif test_player_input in ['South', 'SOUTH', 'south', 'S', 's', 'v']:
             #Check to see if the user_player has conquered all 9 islands
             bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
