@@ -1,12 +1,15 @@
 class Tile:
     
-    def __init__(self, int_loc_x, int_loc_y, str_quadrant, str_island_name):
+    def __init__(self, int_loc_x, int_loc_y, str_quadrant, str_island_name, int_quadrant_label_loc_1, int_quadrant_label_loc_2):
 
         self.int_loc_x = int_loc_x 
         self.int_loc_y = int_loc_y 
 
         self.str_quadrant = str_quadrant
         self.str_island_name = str_island_name
+
+        self.int_quadrant_label_loc_1 = int_quadrant_label_loc_1
+        self.int_quadrant_label_loc_2 = int_quadrant_label_loc_2
     
     def __str__(self):
 

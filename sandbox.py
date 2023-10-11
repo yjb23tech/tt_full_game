@@ -1,7 +1,7 @@
 from class_player import Player
 from class_tile import Tile 
-from funcs import str_get_player_input, view_world_map, set_player_name, set_player_home_city, set_player_age, bool_is_game_complete, tile_validation
-from data_storage import arr_world_map, arr_tile_bosses, dict_moves_in_y, dict_moves_in_x, arr_player_input_options, arr_tiles_islands_full_list
+from funcs import str_get_player_input, view_world_map, display_world_map, update_world_map, set_player_name, set_player_home_city, set_player_age, bool_is_game_complete, tile_validation
+from data_storage import arr_world_map, arr_world_map_game_grid, arr_tile_bosses, dict_moves_in_y, dict_moves_in_x, arr_player_input_options, arr_tiles_islands_full_list
 
 def play():
 
@@ -18,6 +18,8 @@ def play():
         #view_world_map(arr_world_map)
         
         print("-----------------------------------------------------------------------------------")
+
+        display_world_map(arr_world_map_game_grid)
 
         test_player.player_tile_location(arr_world_map)
         test_player.player_tile_valid_directions(arr_world_map, dict_moves_in_y, dict_moves_in_x)
@@ -42,6 +44,10 @@ def play():
                 print("You cannot move North")
                 continue
 
+            #Update visual map for the game grid such that there is an 'X' in place of the usual quadrant label
+            #This will show that the reader that the particular quadrant has successfully been conquered
+            update_world_map(arr_world_map_game_grid, valid_tile)
+
             #Check to see if the user_player has conquered all 9 islands
             bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
         elif test_player_input in ['East', 'EAST', 'east', 'E', 'e', '>']:
@@ -53,15 +59,17 @@ def play():
 
             if valid_tile == None:
                 print("Keep on sailing")
+                continue
             else:
                 test_player.int_loc_x = valid_tile.int_loc_x
                 test_player.int_loc_y = valid_tile.int_loc_y
 
                 valid_tile_boss = arr_tile_bosses[valid_tile.int_loc_x][valid_tile.int_loc_y]
                 valid_tile.pvp_tile_boss(valid_tile_boss, test_player)
-
-            #Check to see if the user_player has conquered all 9 islands 
-            bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
+                
+                update_world_map(arr_world_map_game_grid, valid_tile)
+                #Check to see if the user_player has conquered all 9 islands 
+                bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
         elif test_player_input in ['South', 'SOUTH', 'south', 'S', 's', 'v']:
 
             #validate the tile
@@ -78,6 +86,8 @@ def play():
                 valid_tile_boss = arr_tile_bosses[valid_tile.int_loc_x][valid_tile.int_loc_y]
                 valid_tile.pvp_tile_boss(valid_tile_boss, test_player)
                 
+            update_world_map(arr_world_map_game_grid, valid_tile)
+
             #Check to see if the user_player has conquered all 9 islands
             bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
         elif test_player_input in ['West', 'WEST', 'west', 'W', 'w', '<']:
@@ -95,6 +105,8 @@ def play():
 
                 valid_tile_boss = arr_tile_bosses[valid_tile.int_loc_x][valid_tile.int_loc_y]
                 valid_tile.pvp_tile_boss(valid_tile_boss, test_player)
+
+            update_world_map(arr_world_map_game_grid, valid_tile)
 
             #Check to see if the user_player has conquered all 9 islands 
             bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)

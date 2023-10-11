@@ -38,6 +38,7 @@ while (bool_game_is_on == True):
         arr_tile_quadrants_unconquered[2][5] = " "
     elif ui_test_cases == 'Test 2':
         arr_tile_quadrants_unconquered[2][12] = 'X'
+        arr_tile_quadrants_unconquered[2][13] = " "
     elif ui_test_cases == 'Test 3':
         arr_tile_quadrants_unconquered[2][20] = 'X'
         arr_tile_quadrants_unconquered[2][21] = " "
