@@ -31,3 +31,69 @@ valid_tile.pvp_tile_boss(valid_tile_boss, test_player)
 valid_tile.pvp_tile_boss(valid_tile_boss, test_player)
 
 
+tile_quadrant_unconquered = " afadf 
+
+* * * * *
+*       *
+*       *
+*       *
+* * * * *
+
+"))
+
+tile_quadrant_conquered = [
+
+    * * * * *
+    * *   * *
+    *   *   *
+    * *   * *
+    * * * * * 
+] 
+
+quadrant_conquered_row_first_last = "* * * * *"
+quadrant_conquered_rows_mid = "*     *"
+
+arr_model_quadrant_conquered = [quadrant_conquered_row_first_last, quadrant_conquered_rows_mid, quadrant_conquered_rows_mid, quadrant_conquered_rows_mid, quadrant_conquered_row_first_last]
+
+for row in arr_model_quadrant_conquered:
+    print(row)
+
+tile_quadrant_unconquered = " afadf 
+
+* * * * * * * 
+*   *   *   *
+* * * * * * * 
+*   *   *   *
+* * * * * * *
+
+"))
+
+tile_quadrant_unconquered = " afadf 
+
+* * * * * * * 
+* NE* N *   *
+* * * * * * * 
+*   * C *   *
+* * * * * * *
+*   * S *   *
+* * * * * * *
+
+"))
+
+tile_quadrant_unconquered = " afadf 
+
+* * * * * * * * * * * * *
+*       *       *       *
+*   NW  *   N   *   NE  * 
+*       *       *       *
+* * * * * * * * * * * * *
+*       *       *       *
+*   W   *   C   *   E   *
+*       *       *       * 
+* * * * * * * * * * * * * 
+*       *       *       *
+*   SW  *   S   *   SE  *
+*       *       *       *
+* * * * * * * * * * * * *  
+
+"))
