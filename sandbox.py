@@ -86,10 +86,10 @@ def play():
                 valid_tile_boss = arr_tile_bosses[valid_tile.int_loc_x][valid_tile.int_loc_y]
                 valid_tile.pvp_tile_boss(valid_tile_boss, test_player)
                 
-            update_world_map(arr_world_map_game_grid, valid_tile)
-
-            #Check to see if the user_player has conquered all 9 islands
-            bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
+                update_world_map(arr_world_map_game_grid, valid_tile)
+                
+                #Check to see if the user_player has conquered all 9 islands
+                bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
         elif test_player_input in ['West', 'WEST', 'west', 'W', 'w', '<']:
 
             #validate the tile 
@@ -105,11 +105,11 @@ def play():
 
                 valid_tile_boss = arr_tile_bosses[valid_tile.int_loc_x][valid_tile.int_loc_y]
                 valid_tile.pvp_tile_boss(valid_tile_boss, test_player)
-
-            update_world_map(arr_world_map_game_grid, valid_tile)
-
-            #Check to see if the user_player has conquered all 9 islands 
-            bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
+                
+                update_world_map(arr_world_map_game_grid, valid_tile)
+                
+                #Check to see if the user_player has conquered all 9 islands 
+                bool_game_is_complete = bool_is_game_complete(arr_tiles_islands_full_list, test_player)
         elif test_player_input in ['Inventory', 'INVENTORY', 'inventory', 'I', 'i']:
             #Reveal to the user_player their inventory 
             #Envisioning my loft conversion
